@@ -1,0 +1,5 @@
+LOAD A
+TRANSACTION phase3_error_relation.txt
+TRANSACTION phase3_error_page.txt
+TRANSACTION phase3_namecheck.txt
+QUIT

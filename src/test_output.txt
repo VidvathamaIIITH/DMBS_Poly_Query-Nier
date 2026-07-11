@@ -1,0 +1,5 @@
+[1;33mSimpleRA Graph Test Suite[0m
+=========================
+
+Compiling server...
+[0;32mPASS[0m T01_LoadDirected (11ms)

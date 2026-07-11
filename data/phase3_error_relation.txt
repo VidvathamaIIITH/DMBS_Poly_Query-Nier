@@ -1,0 +1,3 @@
+BEGIN T1
+READ T1 NoTable 0
+COMMIT T1

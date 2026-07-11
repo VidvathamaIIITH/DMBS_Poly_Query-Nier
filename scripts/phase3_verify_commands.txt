@@ -1,0 +1,7 @@
+LOAD student
+LOAD class
+LOAD A
+LOAD F
+TRANSACTION phase3_sample1.txt
+TRANSACTION phase3_sample2.txt
+QUIT
