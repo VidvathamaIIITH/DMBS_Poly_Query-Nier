@@ -239,4 +239,4 @@ Query goes through Syntactic Parser -> Semantic Parser -> Executor.
 ## References
 
 - Base framework derived from PolyQuery
-- Extended with advanced functionality by Team 20.
+- Extended with advanced functionality by Nier_Classification.

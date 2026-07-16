@@ -201,7 +201,7 @@ CLEAR &lt;table_name&gt;
 <h2>References</h2>
 <ul>
 <li>Base framework derived from <a href="https://github.com/PolyQuery/PolyQuery">PolyQuery</a></li>
-<li>Extended with advanced functionality by Team 20.</li>
+<li>Extended with advanced functionality by Nier_Classification.</li>
 </ul>
     """
 ]
