@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-cd C:\Users\susha\OneDrive\Desktop\IIITH\InternDrive\Projects\simplera-team_20
+cd C:\Users\vidva\OneDrive\Desktop\IIITH\Projects\nier_classification\DMBS_Poly_RA
 
 mkdir docs -Force
 mkdir scripts -Force
