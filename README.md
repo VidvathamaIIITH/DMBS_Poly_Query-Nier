@@ -19,7 +19,7 @@
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
-2. [What Is New In This Edition](#2-what-is-new-in-this-edition-vidvathamaiiith)
+2. [Additions](#2-additionscd-vidvathamaiiith)
 3. [Capability Matrix](#3-capability-matrix)
 4. [System Architecture](#4-system-architecture)
 5. [Execution Pipeline](#5-execution-pipeline)
@@ -64,11 +64,7 @@ throughout this document.
 
 ---
 
-## 2. What Is New In This Edition (vidvathamaiiith)
-
-In addition to the baseline requirements, this version preserves every original capability byte-for-byte in behaviour and
-layers on four additive features. None of the pre-existing operators were
-altered; each addition is a new, independently dispatched code path.
+## 2. Additions
 
 ### 2.1 Polymorphic Catalogue Enumeration - `LIST GRAPHS` and `LIST MATRICES`
 
