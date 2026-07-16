@@ -12,7 +12,7 @@ header = content[:header_idx + len('<div id="p">')]
 
 slides = [
     """
-<h1>PolyRA</h1>
+<h1>PolyQuery</h1>
 <p><em>A minimalist, integer-only Relational Database Management System with advanced query and graph capabilities.</em></p>
 <h2><em>Data Systems, Monsoon 2020</em></h2>
     """,
@@ -200,7 +200,7 @@ CLEAR &lt;table_name&gt;
     """
 <h2>References</h2>
 <ul>
-<li>Base framework derived from <a href="https://github.com/PolyRA/PolyRA">PolyRA</a></li>
+<li>Base framework derived from <a href="https://github.com/PolyQuery/PolyQuery">PolyQuery</a></li>
 <li>Extended with advanced functionality by Team 20.</li>
 </ul>
     """

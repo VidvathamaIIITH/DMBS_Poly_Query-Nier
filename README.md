@@ -1,12 +1,12 @@
 <!--
   ============================================================================
-   PolyRA - Multi-Model Relational Algebra Engine
+   PolyQuery - Multi-Model Relational Algebra Engine
    Watermark : vidvathamaiiith
    Maintainer: vidvathamaiiith
   ============================================================================
 -->
 
-# PolyRA - Multi-Model Relational Algebra Engine
+# PolyQuery - Multi-Model Relational Algebra Engine
 
 > A disk-backed, integer-native database engine that unifies relational algebra,
 > graph traversal, out-of-core concurrency control, and high-dimensional vector
@@ -38,7 +38,7 @@
 
 ## 1. Introduction
 
-PolyRA is a compact, high-performance Relational Database Management System
+PolyQuery is a compact, high-performance Relational Database Management System
 written in C++17. It began as a minimal relational-algebra interpreter and has
 since matured into a multi-model data platform. A single interactive shell now
 serves four distinct data paradigms that share one buffer hierarchy, one
@@ -52,7 +52,7 @@ catalogue subsystem, and one query lifecycle:
 - **Dense vector matrices** searched with nearest-neighbour similarity queries.
 
 The engine is engineered for environments where main memory is scarce relative
-to the working set. Rather than loading whole relations into RAM, PolyRA slices
+to the working set. Rather than loading whole relations into RAM, PolyQuery slices
 every dataset into fixed-size blocks and streams them on demand through a custom
 buffer manager. Every operator is written to work over cursors, so a query over
 a five-million-row relation consumes the same steady-state memory as a query
@@ -139,7 +139,7 @@ A summary of the delta introduced by this edition:
 
 ## 4. System Architecture
 
-PolyRA is composed of loosely coupled, individually testable subsystems. The
+PolyQuery is composed of loosely coupled, individually testable subsystems. The
 interpreter dispatches each command through three sequential stages, and the
 executors interact with the data models exclusively through catalogues and
 cursors.
@@ -217,7 +217,7 @@ If either parsing stage fails, a diagnostic (`SYNTAX ERROR` or a specific
 ## 6. Repository Layout
 
 ```
-DMBS_Poly_RA/
+DMBS_PolyQuery/
 |-- include/                 Public headers (mirrors src/ structure)
 |   |-- catalog/             Table, graph and matrix catalogue declarations
 |   |-- executor/            Executor entry-point declarations
@@ -305,7 +305,7 @@ On startup the server prints its watermark banner:
 
 ```
 ============================================================
-  PolyRA (vidvathamaiiith edition)
+  PolyQuery (vidvathamaiiith edition)
   Multi-Model Relational Algebra Engine
   Watermark: vidvathamaiiith
 ============================================================
@@ -553,7 +553,7 @@ watermark is embedded in the runtime startup banner, at the head of every source
 and header file, at the top of every generated log file, and in the project
 metadata.
 
-PolyRA is distributed under the MIT License. The multi-model architecture and
+PolyQuery is distributed under the MIT License. The multi-model architecture and
 the `DESCRIBE`, `CHECKSUM`, extended `LIST`, and Manhattan-metric KNN
 functionality introduced in this edition are released under the same permissive
 terms. See [LICENSE](LICENSE) for the complete text.

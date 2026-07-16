@@ -1,7 +1,7 @@
 # Simple-VectorDB Engine Extension (Phase 4) Report
 
 ## Overview
-This report summarizes the implementation of the **Simple-VectorDB Engine Extension** as part of Phase 4. We extended the PolyRA system to support dense vector storage and similarity search using K-Nearest Neighbors (KNN).
+This report summarizes the implementation of the **Simple-VectorDB Engine Extension** as part of Phase 4. We extended the PolyQuery system to support dense vector storage and similarity search using K-Nearest Neighbors (KNN).
 
 ## Architecture Additions
 
@@ -18,7 +18,7 @@ Extended the parser (`syntacticParser` and `semanticParser`) to handle the follo
 - **`executeLOAD_MATRIX()`:** Iterates over a `.csv` matrix line-by-line, splitting and converting features to floats, and saving them to disk iteratively to avoid loading entire matrices into RAM.
 - **`executeKNN()`:** Implemented an optimized scan-based K-Nearest Neighbors execution using min-heaps to find the closest vectors to `QUERY_VEC` sequentially, avoiding out-of-memory errors on large vector bases.
   - Supports both **EUCLIDEAN** and **COSINE** distance calculation routines using high-performance C++ `<cmath>` utilities.
-  - Distance metrics are normalized/scaled up (`dist * 10000`) and cast to Integers, returning the top K matches as a fully compatible PolyRA Table schema `(RecordID, Similarity_Score)`.
+  - Distance metrics are normalized/scaled up (`dist * 10000`) and cast to Integers, returning the top K matches as a fully compatible PolyQuery Table schema `(RecordID, Similarity_Score)`.
 
 ### 4. Concurrency Control
 - Updated `TransactionManager` to perform Wait-Die deadlock prevention on Matrix objects natively.
@@ -30,4 +30,4 @@ We built a Python generator (`tests/test_vector.py`) to synthesize random high-d
 - Validated correct similarity sorts and results table creation for both metric variations.
 - Ran tests against multi-query scenarios confirming concurrency stability without breaking the preceding Phase 1-3 features.
 
-All original PolyRA functionalities remain unbroken and integrated natively.
+All original PolyQuery functionalities remain unbroken and integrated natively.

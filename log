@@ -1,7 +1,7 @@
-# PolyRA log :: watermark vidvathamaiiith
+# PolyQuery log :: watermark vidvathamaiiith
 BufferManager::BufferManager
 MatrixBufferManager::MatrixBufferManager
-PolyRA server started :: watermark vidvathamaiiith
+PolyQuery server started :: watermark vidvathamaiiith
 ParseQuery::clear
 
 Reading New Command: 
@@ -12449,113 +12449,6 @@ Table::getNext
 ParseQuery::clear
 
 Reading New Command: 
-LOAD GRAPH G1 D
-doCommand
-syntacticParse
-syntacticParseLOAD_GRAPH
-semanticParse
-semanticParseLOAD_GRAPH
-executeLOAD_GRAPH
-Table::Table
-Table::Table
-Table::Table
-Table::Table
-Graph::load
-Table::load
-Table::extractColumnNames
-Table::blockify
-BufferManager::writePage
-Page::Page
-Page::writePage
-Table::load
-Table::extractColumnNames
-Table::blockify
-BufferManager::writePage
-Page::Page
-Page::writePage
-Table::load
-Table::extractColumnNames
-Table::blockify
-BufferManager::writePage
-Page::Page
-Page::writePage
-Table::load
-Table::extractColumnNames
-Table::blockify
-BufferManager::writePage
-Page::Page
-Page::writePage
-TableCatalogue::isTable
-TableCatalogue::~insertTable
-TableCatalogue::isTable
-TableCatalogue::~insertTable
-TableCatalogue::isTable
-TableCatalogue::~insertTable
-TableCatalogue::isTable
-TableCatalogue::~insertTable
-BufferManager::getPage
-BufferManager::inPool
-BufferManager::insertIntoPool
-Page::Page
-TableCatalogue::getTable
-Page::getRow
-Page::getRow
-Page::getRow
-BufferManager::writePage
-Page::Page
-Page::writePage
-BufferManager::getPage
-BufferManager::inPool
-BufferManager::insertIntoPool
-Page::Page
-TableCatalogue::getTable
-Page::getRow
-Page::getRow
-Page::getRow
-BufferManager::writePage
-Page::Page
-Page::writePage
-ParseQuery::clear
-
-Reading New Command: 
-DEGREE G1 1
-doCommand
-syntacticParse
-syntacticParseDEGREE
-semanticParse
-semanticParseDEGREE
-executeDEGREE
-BufferManager::getPage
-BufferManager::inPool
-BufferManager::insertIntoPool
-Page::Page
-TableCatalogue::getTable
-Page::getRow
-Page::getRow
-Page::getRow
-Page::getRow
-BufferManager::getPage
-BufferManager::inPool
-BufferManager::insertIntoPool
-Page::Page
-TableCatalogue::getTable
-Page::getRow
-BufferManager::getPage
-BufferManager::inPool
-BufferManager::getFromPool
-Page::getRow
-Page::getRow
-Page::getRow
-Page::getRow
-BufferManager::getPage
-BufferManager::inPool
-BufferManager::getFromPool
-Page::getRow
-Page::getRow
-Page::getRow
-ParseQuery::clear
-
-Reading New Command: 
 LOAD VECTOR MATRIX vidva_vectors 4
 doCommand
 syntacticParse
@@ -12627,27 +12520,6 @@ Table::printRow
 ParseQuery::clear
 
 Reading New Command: 
-LIST TABLES
-doCommand
-syntacticParse
-syntacticParseLIST
-semanticParse
-semanticParseLIST
-executeLIST
-TableCatalogue::print
-ParseQuery::clear
-
-Reading New Command: 
-LIST GRAPHS
-doCommand
-syntacticParse
-syntacticParseLIST
-semanticParse
-semanticParseLIST
-executeLIST
-ParseQuery::clear
-
-Reading New Command: 
 LIST MATRICES
 doCommand
 syntacticParse
@@ -12665,24 +12537,6 @@ BufferManager::deleteFile
 BufferManager::deleteFile: Success
 Table::isPermanent
 BufferManager::deleteFile: Success
-Table::~unload
-BufferManager::deleteFile
-BufferManager::deleteFile: Success
-Table::isPermanent
-BufferManager::deleteFile: Err
-Table::~unload
-BufferManager::deleteFile
-BufferManager::deleteFile: Success
-Table::isPermanent
-BufferManager::deleteFile: Err
-Table::~unload
-BufferManager::deleteFile
-BufferManager::deleteFile: Success
-Table::isPermanent
-Table::~unload
-BufferManager::deleteFile
-BufferManager::deleteFile: Success
-Table::isPermanent
 Table::~unload
 BufferManager::deleteFile
 BufferManager::deleteFile: Success

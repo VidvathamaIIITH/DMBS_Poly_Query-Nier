@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-PolyRA Graph Test Suite Generator
+PolyQuery Graph Test Suite Generator
 Generates test data files and test scripts for comprehensive testing.
 """
 
@@ -737,5 +737,5 @@ def run_tests():
     return results_summary
 
 if __name__ == "__main__":
-    print("PolyRA Graph Test Suite Generator & Executor", flush=True)
+    print("PolyQuery Graph Test Suite Generator & Executor", flush=True)
     run_tests()

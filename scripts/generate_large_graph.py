@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Large Graph Generator for PolyRA Stress Testing
+Large Graph Generator for PolyQuery Stress Testing
 
 Generates graphs with configurable node/edge counts for testing
 the memory-efficient graph operations.

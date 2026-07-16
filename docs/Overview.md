@@ -5,7 +5,7 @@ class: invert
 backgroundColor: black
 ---
 
-# PolyRA
+# PolyQuery
 
 A minimalist, integer-only Relational Database Management System with advanced query and graph capabilities.
   
@@ -238,5 +238,5 @@ Query goes through Syntactic Parser -> Semantic Parser -> Executor.
 
 ## References
 
-- Base framework derived from PolyRA
+- Base framework derived from PolyQuery
 - Extended with advanced functionality by Team 20.

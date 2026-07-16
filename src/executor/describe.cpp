@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- *  PolyRA - Multi-Model Relational Algebra Engine
+ *  PolyQuery - Multi-Model Relational Algebra Engine
  *  Watermark: vidvathamaiiith
  * ============================================================================
  *

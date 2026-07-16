@@ -1,5 +1,5 @@
 #!/bin/bash
-# PolyRA Graph Test Runner
+# PolyQuery Graph Test Runner
 # Runs all generated test cases and reports results
 
 set -e
@@ -46,10 +46,10 @@ FAILED=0
 CRASHED=0
 RESULTS_FILE="../data/test_results.txt"
 
-echo "PolyRA Graph Test Suite" > "$RESULTS_FILE"
+echo "PolyQuery Graph Test Suite" > "$RESULTS_FILE"
 echo "=========================" >> "$RESULTS_FILE"
 echo "Test run: $(date)" >> "$RESULTS_FILE"
-echo -e "${YELLOW}PolyRA Graph Test Suite${NC}"
+echo -e "${YELLOW}PolyQuery Graph Test Suite${NC}"
 echo "========================="
 echo ""
 
