@@ -31,7 +31,18 @@ enum QueryType
     GROUP,
     LOAD_MATRIX,
     KNN,
+    // --- vidvathamaiiith extensions (novel commands) ---
+    DESCRIBE,
+    CHECKSUM,
     UNDETERMINED
+};
+
+// vidvathamaiiith extension: which catalogue the LIST command should enumerate.
+enum ListObjectType
+{
+    LIST_TABLES,
+    LIST_GRAPHS,
+    LIST_MATRICES
 };
 
 enum JoinConditionType
@@ -111,6 +122,7 @@ struct Condition {
 enum KnnMetric {
     COSINE,
     EUCLIDEAN,
+    MANHATTAN, // vidvathamaiiith extension: L1 (taxicab) distance metric
     NO_METRIC
 };
 
@@ -228,6 +240,14 @@ public:
     int knnTopX = 0;
     KnnMetric knnMetric = NO_METRIC;
 
+    // --- vidvathamaiiith extensions ---
+    // LIST target selector (LIST TABLES | GRAPHS | MATRICES)
+    ListObjectType listObjectType = LIST_TABLES;
+    // DESCRIBE <relation> metadata inspector
+    string describeRelationName = "";
+    // CHECKSUM <table> deterministic content fingerprint
+    string checksumRelationName = "";
+
     ParsedQuery();
     void clear();
 };
@@ -262,6 +282,10 @@ bool syntacticParseGROUP();
 // Phase 4 Vector syntactic parsers
 bool syntacticParseLOAD_MATRIX();
 bool syntacticParseKNN();
+
+// vidvathamaiiith extension syntactic parsers
+bool syntacticParseDESCRIBE();
+bool syntacticParseCHECKSUM();
 
 bool isFileExists(string tableName);
 bool isQueryFile(string fileName);

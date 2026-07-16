@@ -1,7 +1,18 @@
+/*
+ * ============================================================================
+ *  PolyRA - Multi-Model Relational Algebra Engine
+ *  Watermark : vidvathamaiiith
+ *  Maintainer: vidvathamaiiith
+ * ============================================================================
+ */
 //Server Code
 #include "global.h"
 
 using namespace std;
+
+// vidvathamaiiith build signature, surfaced in the startup banner and log.
+const string POLYRA_WATERMARK = "vidvathamaiiith";
+const string POLYRA_VERSION = "PolyRA (vidvathamaiiith edition)";
 
 float BLOCK_SIZE = 1;
 uint BLOCK_COUNT = 10;
@@ -25,6 +36,13 @@ void doCommand()
 
 int main(void)
 {
+    // vidvathamaiiith: startup banner / build watermark.
+    cout << "============================================================" << endl;
+    cout << "  " << POLYRA_VERSION << endl;
+    cout << "  Multi-Model Relational Algebra Engine" << endl;
+    cout << "  Watermark: " << POLYRA_WATERMARK << endl;
+    cout << "============================================================" << endl;
+    logger.log("PolyRA server started :: watermark vidvathamaiiith");
 
     regex delim("[^\\s,]+");
     string command;

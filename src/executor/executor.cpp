@@ -27,6 +27,8 @@ void executeCommand(){
         case GROUP: executeGROUP(); break;
         case LOAD_MATRIX: executeLOAD_MATRIX(); break;
         case KNN: executeKNN(); break;
+        case DESCRIBE: executeDESCRIBE(); break; // vidvathamaiiith extension
+        case CHECKSUM: executeCHECKSUM(); break; // vidvathamaiiith extension
         default: cout<<"PARSING ERROR"<<endl;
     }
 

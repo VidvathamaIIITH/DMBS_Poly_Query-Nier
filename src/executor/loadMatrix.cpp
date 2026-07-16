@@ -1,3 +1,10 @@
+/*
+ * ============================================================================
+ *  PolyRA - Multi-Model Relational Algebra Engine
+ *  Watermark : vidvathamaiiith
+ *  Maintainer: vidvathamaiiith
+ * ============================================================================
+ */
 #include "global.h"
 
 void executeLOAD_MATRIX()

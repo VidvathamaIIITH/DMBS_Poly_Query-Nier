@@ -44,13 +44,17 @@ public:
         return matrices.find(matrixName) != matrices.end();
     }
     
+    // vidvathamaiiith extension: enumerate every loaded matrix for `LIST MATRICES`.
     void print()
     {
-        cout << "\nMATRICES\n";
+        cout << "\nMATRICES" << endl;
+        int count = 0;
         for (auto pair : matrices)
         {
-            cout << pair.first << endl;
+            cout << pair.first << " [dim=" << pair.second->dimension << "]" << endl;
+            count++;
         }
+        cout << "\n\nRow Count: " << count << endl;
     }
 };
 

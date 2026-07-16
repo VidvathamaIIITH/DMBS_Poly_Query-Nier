@@ -1,3 +1,10 @@
+/*
+ * ============================================================================
+ *  PolyRA - Multi-Model Relational Algebra Engine
+ *  Watermark : vidvathamaiiith
+ *  Maintainer: vidvathamaiiith
+ * ============================================================================
+ */
 #ifndef TABLE_H
 #define TABLE_H
 

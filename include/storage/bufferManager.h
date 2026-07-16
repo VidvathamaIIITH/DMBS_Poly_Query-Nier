@@ -1,3 +1,10 @@
+/*
+ * ============================================================================
+ *  PolyRA - Multi-Model Relational Algebra Engine
+ *  Watermark : vidvathamaiiith
+ *  Maintainer: vidvathamaiiith
+ * ============================================================================
+ */
 #ifndef BUFFERMANAGER_H
 #define BUFFERMANAGER_H
 

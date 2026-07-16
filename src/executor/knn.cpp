@@ -38,6 +38,16 @@ float computeEuclidean(const vector<float>& A, const vector<float>& B) {
     return sqrt(distSq);
 }
 
+// vidvathamaiiith extension: Manhattan (L1 / taxicab) distance.
+// Lower is closer, matching the heap ordering used by the other metrics.
+float computeManhattan(const vector<float>& A, const vector<float>& B) {
+    float dist = 0.0f;
+    for (int i = 0; i < A.size(); i++) {
+        dist += fabs(A[i] - B[i]);
+    }
+    return dist;
+}
+
 void executeKNN()
 {
     logger.log("executeKNN");
@@ -67,6 +77,8 @@ void executeKNN()
             float dist = 0.0f;
             if (parsedQuery.knnMetric == COSINE) {
                 dist = computeCosine(parsedQuery.queryVector, row.second);
+            } else if (parsedQuery.knnMetric == MANHATTAN) { // vidvathamaiiith extension
+                dist = computeManhattan(parsedQuery.queryVector, row.second);
             } else {
                 dist = computeEuclidean(parsedQuery.queryVector, row.second);
             }

@@ -1,0 +1,27 @@
+# ============================================================================
+#  PolyRA - Multi-Model Relational Algebra Engine
+#  Watermark: vidvathamaiiith
+# ============================================================================
+# Build artifacts and transient runtime files should not be tracked.
+
+# Compiled object files
+*.o
+*.obj
+
+# Linked executables
+server
+server.exe
+src/server.exe
+*.out
+
+# Runtime log
+log
+src/log
+
+# Transient block-spill directory (regenerated on every server start)
+data/temp/
+
+# Editor / OS noise
+.vscode/
+.DS_Store
+Thumbs.db

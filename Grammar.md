@@ -21,6 +21,8 @@ non_assignment_statement -> clear_statement
                            | quit_statement
                            | rename_statement
                            | source_statement
+                           | describe_statement   /* vidvathamaiiith extension */
+                           | checksum_statement   /* vidvathamaiiith extension */
 
 cross_product_statement -> CROSS relation_name relation_name
 
@@ -50,7 +52,9 @@ index_statement -> INDEX ON column_name FROM relation_name USING indexing_strate
 
 indexing_strategy -> HASH | BTREE | NOTHING;
 
-list_statement -> LIST TABLES;
+list_statement -> LIST list_target
+
+list_target -> TABLES | GRAPHS | MATRICES   /* GRAPHS, MATRICES are extensions */
 
 load_statement -> LOAD relation_name
 
@@ -61,5 +65,13 @@ quit_statement -> QUIT
 rename_statement -> RENAME column_name TO column_name FROM relation_name
 
 source_statement -> SOURCE file_name
+
+/* ---- vidvathamaiiith  ---- */
+
+describe_statement -> DESCRIBE relation_name
+/* relation_name may resolve to a table, a vector matrix, or a graph */
+
+checksum_statement -> CHECKSUM relation_name
+/* relation_name must resolve to a table */
 
 ```

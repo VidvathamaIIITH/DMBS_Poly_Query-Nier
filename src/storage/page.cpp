@@ -1,3 +1,10 @@
+/*
+ * ============================================================================
+ *  PolyRA - Multi-Model Relational Algebra Engine
+ *  Watermark : vidvathamaiiith
+ *  Maintainer: vidvathamaiiith
+ * ============================================================================
+ */
 #include "global.h"
 /**
  * @brief Construct a new Page object. Never used as part of the code

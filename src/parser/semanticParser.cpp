@@ -27,6 +27,8 @@ bool semanticParse(){
         case GROUP: return semanticParseGROUP();
         case LOAD_MATRIX: return semanticParseLOAD_MATRIX();
         case KNN: return semanticParseKNN();
+        case DESCRIBE: return semanticParseDESCRIBE(); // vidvathamaiiith extension
+        case CHECKSUM: return semanticParseCHECKSUM(); // vidvathamaiiith extension
         default: cout<<"SEMANTIC ERROR"<<endl;
     }
 

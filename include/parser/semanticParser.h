@@ -32,4 +32,8 @@ bool semanticParseGROUP();
 bool semanticParseLOAD_MATRIX();
 bool semanticParseKNN();
 
+// vidvathamaiiith extension semantic parsers
+bool semanticParseDESCRIBE();
+bool semanticParseCHECKSUM();
+
 #endif

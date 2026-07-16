@@ -10,7 +10,7 @@ backgroundColor: black
 A minimalist, integer-only Relational Database Management System with advanced query and graph capabilities.
   
 
-## _Data Systems, Monsoon 2020_
+## _Data Systems, Monsoon 2025_
 
 ---
 
@@ -73,9 +73,16 @@ Syntax:
 PRINT <table_name>
 PRINT GRAPH <graph_name>
 LIST TABLES
+LIST GRAPHS
+LIST MATRICES
+DESCRIBE <relation_name>
+CHECKSUM <table_name>
 ```
 - `PRINT`: Displays the first few rows (up to `PRINT_COUNT`).
 - `LIST TABLES`: Shows all tables loaded or created in the current session.
+- `LIST GRAPHS` / `LIST MATRICES` (vidvathamaiiith extensions): enumerate the graph and vector-matrix catalogues respectively.
+- `DESCRIBE` (vidvathamaiiith extension): reports schema and storage statistics for a table, matrix, or graph without materialising any rows.
+- `CHECKSUM` (vidvathamaiiith extension): streams a table and reports a deterministic 64-bit content fingerprint for integrity/equality checks.
 
 ---
 
@@ -185,11 +192,12 @@ Syntax
 
 Syntax
 ```
-<new_table> <- KNN <matrix_name> QUERY_VEC [f1, f2...] TOP <X> METRIC <COSINE|EUCLIDEAN>
+<new_table> <- KNN <matrix_name> QUERY_VEC [f1, f2...] TOP <X> METRIC <COSINE|EUCLIDEAN|MANHATTAN>
 ```
 - Performs a K-Nearest Neighbors search over the specified vector matrix.
 - `QUERY_VEC` is the target vector you want to find neighbors for.
 - `TOP <X>` specifies the number of closest rows to retrieve.
+- `MANHATTAN` (L1 / taxicab distance) is a vidvathamaiiith extension alongside the original `COSINE` and `EUCLIDEAN` metrics.
 - Outputs an ordered table with `RecordID` and `Similarity_Score` (smaller is closer).
 
 ---

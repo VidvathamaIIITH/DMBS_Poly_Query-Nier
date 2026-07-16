@@ -49,6 +49,10 @@ bool syntacticParse()
         return syntacticParseDEGREE();
     else if (possibleQueryType == "SORT")
         return syntacticParseSORT();
+    else if (possibleQueryType == "DESCRIBE") // vidvathamaiiith extension
+        return syntacticParseDESCRIBE();
+    else if (possibleQueryType == "CHECKSUM") // vidvathamaiiith extension
+        return syntacticParseCHECKSUM();
     else
     {
         int arrowIndex = -1;
@@ -197,6 +201,11 @@ void ParsedQuery::clear()
     this->matrixDimension = 0;
     this->queryVector.clear();
     this->knnTopX = 0;
+
+    // vidvathamaiiith extensions
+    this->listObjectType = LIST_TABLES;
+    this->describeRelationName = "";
+    this->checksumRelationName = "";
 }
 
 /**
@@ -449,11 +458,12 @@ bool syntacticParseKNN()
     curr++;
     if (tokenizedQuery[curr] == "COSINE") parsedQuery.knnMetric = COSINE;
     else if (tokenizedQuery[curr] == "EUCLIDEAN") parsedQuery.knnMetric = EUCLIDEAN;
+    else if (tokenizedQuery[curr] == "MANHATTAN") parsedQuery.knnMetric = MANHATTAN; // vidvathamaiiith extension
     else {
         cout << "SYNTAX ERROR" << endl;
         return false;
     }
-    
+
     return true;
 }
 

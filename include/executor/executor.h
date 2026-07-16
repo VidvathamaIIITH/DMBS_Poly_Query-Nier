@@ -32,6 +32,10 @@ void executeGROUP();
 void executeLOAD_MATRIX();
 void executeKNN();
 
+// vidvathamaiiith extension executors
+void executeDESCRIBE();
+void executeCHECKSUM();
+
 bool evaluateBinOp(int value1, int value2, BinaryOperator binaryOperator);
 void printRowCount(int rowCount);
 
